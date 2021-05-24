@@ -1,0 +1,61 @@
+@import "./main.less";
+
+.form-container {
+  .flex(@align: center);
+  margin: 2rem 0;
+  font-size: 1rem;
+  height: 100%;
+}
+
+form {
+  .flex(@direction: column);
+  .padding(2rem);
+  max-width: 35rem;
+  box-shadow: 0px 1px 3px 0px lighten(@dark, 80%);
+  background-color: @secondary;
+  transition: all 200ms ease;
+  width: 100%;
+}
+
+.form-field {
+  .flex(@direction: column; @justify: space-between);
+  width: 100%;
+  font-size: @pageFontSize;
+  margin: 0.3rem 0;
+  label {
+    margin: 0.5rem 0;
+    i {
+      font-size: 10px;
+      vertical-align: top;
+      color: @error;
+    }
+  }
+  input {
+    width: 100%;
+    .padding(0.3rem);
+    border: solid 1px @semitransparent;
+    height: 40px;
+
+  }
+
+}
+
+.submit-button {
+  text-transform: uppercase;
+  background-color: @primary;
+  color: @light;
+  width: 50%;
+  cursor: pointer;
+  margin: 20px auto 0;
+}
+
+.error {
+  font-size:0.8rem;
+  margin: 0.3rem 0;
+  color: @error;
+}
+
+.form-sent-text {
+  margin: 20rem 0;
+  text-align: center;
+}
